@@ -1,1 +1,1 @@
-<a href="/inscription.php">Inscription</a>
+<a href="/inscription.php">Inscription2</a>
