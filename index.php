@@ -1,1 +1,1 @@
-<h1> BIJOUR jorishhhhhh </h1>
+<a href="/inscription.php">Inscription</a>
