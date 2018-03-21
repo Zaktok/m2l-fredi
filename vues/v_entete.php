@@ -8,14 +8,14 @@
  </head>
  <body>
  	<div id="bandeau">Gestion des factures</div>
- 	<div id="deconnexion">
-	<?php
-	if (isset($_SESSION["sessid"]))
-		echo "<a href='index.php?uc=faireDeconnexion'> D&eacute;connexion </a>";
-	?>
-	</div>
  	<div id="menu">
- 		<a href="index.php?uc=faireIndentification"> Indentification </a>
+        <?php
+        if (!isset($_SESSION["sessid"]))            
+            echo "<a href='index.php?uc=identification'> Indentification </a>";
+        else 
+            echo "<a href='index.php?uc=faireDeconnexion'> D&eacute;connexion </a>";
+        ?>
+ 		
  		<a href="index.php?uc=ajoutProduit"> Produits </a>
  	</div>
      <div id="corps">

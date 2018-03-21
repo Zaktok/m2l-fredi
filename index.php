@@ -9,18 +9,22 @@ if(!isset($_REQUEST['uc'])){
 }
 $uc = $_REQUEST['uc'];
 switch($uc){
-	case 'faireIndentification' :{
+	case 'faireIdentification' :{
 		include("controleurs/c_identification.php");
         break;
 	}
-        case 'faireInscription' :{
+    case 'faireInscription' :{
 		include("controleurs/c_inscription.php");
         break;
-        }
+    }
+    case 'faireDeconnexion' :{
+		include("controleurs/c_deconnexion.php");
+        break;
+    }
 }
 
 switch($uc){
-	case 'indentification' :{
+	case 'identification' :{
 		include("vues/v_identification.php");break;
 	}
         case 'inscription' :{
