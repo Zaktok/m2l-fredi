@@ -15,9 +15,8 @@
 	?>
 	</div>
  	<div id="menu">
- 		<a href="index.php?uc=ajoutClient"> Clients </a>
+ 		<a href="index.php?uc=faireIndentification"> Indentification </a>
  		<a href="index.php?uc=ajoutProduit"> Produits </a>
- 		<a href="index.php?uc=ajoutFacture"> Factures </a>
  	</div>
      <div id="corps">
 

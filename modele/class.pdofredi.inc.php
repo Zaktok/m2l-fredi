@@ -39,7 +39,7 @@ class pdofredi{
 	 * @return vrai si l'utilisateur existe, faux sinon
 	 */
 	function verifid($id, $mdp) {
-		$req = "select * from Utilisateur where Id = '$id' and MotDePasse = '$mdp'";
+		$req = "select * from adherents where num_licence = '$id' and mdp = '$mdp'";
 		$res = pdofredi::$monPdo->query($req);
 
 		if (count($res)>0) {
@@ -67,13 +67,13 @@ class pdofredi{
 * @param $nom nom du client
 * @return 1 si l'ajout est rélisé, 0 sinon.
 */
-	public function ajoutAdh($num,$mail,$nom,$pren,$adr,$cp,$ville,$club){
+	public function ajoutAdh($num,$mail,$mdp,$nom,$pren,$adr,$cp,$ville,$club){
         $ok=false;
         if($this->verifLicence($num)){
-            $req = "insert into adherents values($num,'$mail','$nom','$pren','$adr','$cp','$ville',$club)";
+            $req = "insert into adherents values($num,'$mail','$mdp','$nom','$pren','$adr','$cp','$ville',$club)";
             $ok = pdofredi::$monPdo->exec($req);
         }
-		return $ok;
+		return "insert into adherents values($num,'$mail','$mdp',$nom','$pren','$adr','$cp','$ville',$club)";
 	}
 
 	public function verifLicence($num){
